@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 31.119 33.28">
+  <g id="Products" opacity="0.68">
+    <g id="Group_1501" data-name="Group 1501" transform="translate(0 0)">
+      <g id="Group">
+        <g id="Group-2" data-name="Group">
+          <g id="Group-3" data-name="Group">
+            <path id="Vector" d="M9.212.935A2.048,2.048,0,0,0,7.472,0H0V8.232H13.743Z" transform="translate(16.643)" fill="#fff"/>
+            <path id="Vector-2" data-name="Vector" d="M13.8,0H6.256A2.047,2.047,0,0,0,4.514.937L0,8.232H13.8V0Z" transform="translate(0.75)" fill="#fff"/>
+            <path id="Vector-3" data-name="Vector" d="M0,0V20.8A2.386,2.386,0,0,0,2.463,23.1H28.656A2.386,2.386,0,0,0,31.119,20.8V0ZM20.314,8.749,14.9,13.794a1.1,1.1,0,0,1-1.481,0l-2.539-2.364a.929.929,0,0,1,0-1.379,1.1,1.1,0,0,1,1.482,0l1.8,1.675L18.833,7.37a1.1,1.1,0,0,1,1.481,0A.928.928,0,0,1,20.314,8.749Z" transform="translate(0 10.182)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Fav-icon -->
+    <link rel="shortcut icon" href="assets/Test Logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script type="module" src="node_modules/chart.js/dist/chart.js"></script>
+  <script type="module" src="node_modules/chart.js/dist/chart.js.map"></script>
+   
+
+    <!-- FusionCharts -->
+    <!-- Include FusionCharts library -->
+    <!-- <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script> -->
+    <!-- Include the required map module -->
+    <!-- <script src="https://cdn.fusioncharts.com/fusionmaps/latest/fusionmaps.js"></script>
+    <script src="https://cdn.fusioncharts.com/fusionmaps/latest/themes/fusion-theme.js"></script> -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JavaScript for Chart.js -->
+    <script src="script.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+  </head>
+  <body>
+    <!-- Main Container using Bootstrap Grid -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 bg-dark text-white p-3">
+          <div class="text-center mb-4">
+            <img src="/assets/Test Logo.svg" alt="Logo" />
+          </div>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a class="nav-link text-white active" href="#"
+                ><img
+                  src="/assets/Dashboard Logo.svg"
+                  class="me-1"
+                  alt="Dashboard Logo"
+                />
+                Dashboard</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link text-white rounded" href="#"
+                ><img src="/assets/Orders Logo.svg" class="me-1" alt="Orders Logo" />
+                Orders</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link text-white rounded" href="#"
+                ><img
+                  src="/assets/Products Logo.svg"
+                  class="me-1"
+                  alt="Products Logo"
+                />
+                Products</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link text-white rounded" href="#"
+                ><img
+                  src="/assets/Customer Logo.svg"
+                  class="me-1"
+                  alt="Customer Logo"
+                />
+                Customer</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link text-white rounded" href="#"
+                ><img src="/assets/Message Logo.svg" class="me-1" alt="Message Logo" />
+                Message</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link text-white rounded" href="#"
+                ><img src="/assets/Setting Logo.svg" class="me-1" alt="Settings Logo" />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-9 col-lg-10 p-4">
+          <!-- Header -->
+          <header class="row align-items-center mb-4">
+            <!-- Dashboard Title -->
+            <div class="col-12 col-md-6 mb-2 mb-md-0 text-center text-md-start">
+              <h1>Dashboard</h1>
+            </div>
+
+            <!-- Icons and User Info with Dropdown -->
+            <div class="col-12 col-md-6 text-center text-md-end">
+              <a
+                class="d-inline-block nav-link-hover rounded me-2 px-1"
+                href="#"
+              >
+                <img src="/assets/Mail logo.svg" alt="Mail Logo" />
+              </a>
+              <a
+                class="d-inline-block nav-link-hover rounded me-2 px-1"
+                href="#"
+              >
+                <img src="/assets/Notification Logo.svg" alt="Notification Logo" />
+              </a>
+
+              <!-- User Avatar and Dropdown for John Doe -->
+              
+                <div class="d-inline-block dropdown">
+                  <img
+                    src="/assets/User.jpg"
+                    class="rounded-circle me-2"
+                    alt="User Avatar"
+                  />
+
+                  <!-- Dropdown Toggle (John Doe) -->
+                
+                  <a
+                  href="#"
+                  class="dropdown-toggle text-dark text-decoration-none"
+                  id="dropdownMenuButton"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >
+                   <b>John Doe </b>
+                  </a>
+                
+                  <!-- Dropdown Menu -->
+                  <ul
+                  class="dropdown-menu dropdown-menu-end text-center"
+                  aria-labelledby="dropdownMenuButton"
+                  >
+                  <li>
+                    <a class="dropdown-item nav-link rounded" href="#"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item nav-link rounded" href="#"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item nav-link rounded" href="#"
+                      >Logout</a
+                    >
+                  </li>
+                  </ul>
+                </div>
+              
+            </div>
+          </header>
+
+          <!-- Overview Cards -->
+          <div class="row">
+            <h5>Overview</h5>
+          </div>
+            <div class="row mb-4">
+              <!-- Total Customer Visit Card -->
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card text-center p-3 h-100">
+                  <div class="d-flex flex-row align-items-center">
+                    <!-- Image and Heading in same column -->
+                    <img src="/assets/Total Customer Logo.svg" class="mb-2 me-2" style="width: 30px;" alt="Total Customer Visit" />
+                    <h5 class="me-2">Total Customer Visit</h5>
+                    <p class="mt-2 me-2">721,345</p>
+                  </div>
+                  <!-- Chart Presentation-->
+                  <canvas id="customerVisitChart" class="w-100" height="150"></canvas>
+                  
+                </div>
+              </div>
+
+              <!-- Total Orders Card -->
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card text-center p-3 h-100">
+                  <div class="d-flex flex-column align-items-center">
+                    <!-- Image and Heading in same column -->
+                    <img src="/assets/Total Orders Logo.svg" class="mb-2" style="width: 30px; height: 30px;" alt="Total Orders" />
+                    <h5>Total Orders</h5>
+                  </div>
+                  <!-- Chart Presentation -->
+                  <canvas id="ordersChart" class="w-100" height="150"></canvas>
+                  <p class="mt-2">23,482</p>
+                </div>
+              </div>
+
+              <!-- Total Pending Card -->
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card text-center p-3 h-100">
+                  <div class="d-flex flex-column align-items-center">
+                    <!-- Image and Heading in same column -->
+                    <img src="/assets/Total Pending Logo.svg" class="mb-2" style="width: 30px; height: 30px;" alt="Total Pending" />
+                    <h5>Total Pending</h5>
+                  </div>
+                  <!-- Chart Presentation -->
+                  <canvas id="pendingChart" class="w-100" height="150"></canvas>
+                  <p class="mt-2">4,440</p>
+                </div>
+              </div>
+
+              <!-- Total Delivered Card -->
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card text-center p-3 h-100">
+                  <div class="d-flex flex-column align-items-center">
+                    <!-- Image and Heading in same column -->
+                    <img src="/assets/Total Delivered Logo.svg" class="mb-2" style="width: 30px;" alt="Total Delivered" />
+                    <h5>Total Delivered</h5>
+                  </div>
+                  <!-- Chart Presentation -->
+                  <canvas id="deliveredChart" class="w-100" height="150"></canvas>
+                  <p class="mt-2">19,442</p>
+                </div>
+              </div>
+            </div>
+
+
+        
+        <!-- Map and Income Section -->
+        <div class="row">
+          <!-- World Map Container -->
+          <div class="col-md-8 d-flex mb-3 mb-md-0">
+            <div class="card p-3 flex-grow-1 h-100">
+              <h5 class="mb-4">Customer Visit on Site</h5>
+              <img src="/assets/Customer-visit-map.png" alt="map data" />
+              <!-- <canvas id="mapChart"></canvas> -->
+              <!-- <div id="worldMapContainer" style="height: 300px;"></div> -->
+            </div>
+          </div>
+
+          <!-- Income received by -->
+          <div class="col-md-4 d-flex">
+            <div class="card p-3 flex-grow-1 h-100">
+              <h5 class="mb-4">Income Received By</h5>
+              <!-- Google Pay -->
+              <div class="d-flex justify-content-between align-items-center bg-light p-2 mb-2 rounded flex-wrap">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/Google Pay.png" class="me-2 img-fluid" alt="Google Pay" style="width: 30px;" />
+                  <span class="payment-name">Google Pay</span>
+                </div>
+                <span class="fw-bold payment-value">$721,345</span>
+              </div>
+
+              <!-- PhonePe -->
+              <div class="d-flex justify-content-between align-items-center bg-light p-2 mb-2 rounded flex-wrap">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/Phonepe.png" class="me-2 img-fluid" alt="PhonePe" style="width: 30px;" />
+                  <span class="payment-name">PhonePe</span>
+                </div>
+                <span class="fw-bold payment-value">$23,482</span>
+              </div>
+
+              <!-- Amazon -->
+              <div class="d-flex justify-content-between align-items-center bg-light p-2 mb-2 rounded flex-wrap">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/Amazon.png" class="me-2 img-fluid" alt="Amazon" style="width: 30px;" />
+                  <span class="payment-name">Amazon</span>
+                </div>
+                <span class="fw-bold payment-value">$5,382</span>
+              </div>
+
+              <!-- UPI -->
+              <div class="d-flex justify-content-between align-items-center bg-light p-2 mb-2 rounded flex-wrap">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/UPI.png" class="me-2 img-fluid" alt="UPI" style="width: 30px;" />
+                  <span class="payment-name">UPI</span>
+                </div>
+                <span class="fw-bold payment-value">$43,820</span>
+              </div>
+
+              <!-- Bank Transfer -->
+              <div class="d-flex justify-content-between align-items-center bg-light p-2 mb-2 rounded flex-wrap">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/Bank.png" class="me-2 img-fluid" alt="Bank Transfer" style="width: 30px;" />
+                  <span class="payment-name">Bank Transfer</span>
+                </div>
+                <span class="fw-bold payment-value">$53,847</span>
+              </div>
+
+              <!-- Cash on Delivery -->
+              <div class="d-flex justify-content-between align-items-center bg-light p-2 mb-2 rounded flex-wrap">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/Cash on Delivery.png" class="me-2 img-fluid" alt="Cash on Delivery" style="width: 30px;" />
+                  <span class="payment-name">Cash on Delivery</span>
+                </div>
+                <span class="fw-bold payment-value">$72,920</span>
+              </div>
+
+              <!-- Paytm -->
+              <div class="d-flex justify-content-between align-items-center bg-light p-2 mb-2 rounded flex-wrap">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/Paytm.png" class="me-2 img-fluid" alt="Paytm" style="width: 30px;" />
+                  <span class="payment-name">Paytm</span>
+                </div>
+                <span class="fw-bold payment-value">$824</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+            
+
+        <!-- Target, Earnings, Profit & Loss Charts -->
+        <div class="row mt-4">
+          <!-- Total Target Charts-->
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card p-3 h-100">
+              <h5>Total Target Achieved</h5>
+              <canvas id="targetAchievedChart" width="400" height="200"></canvas>
+            </div>
+          </div>
+          <!-- Total Earnings Charts-->
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card p-3 h-100">
+              <h5>Total Earnings</h5>
+              <canvas id="earningsChart" width="400" height="200"></canvas>
+            </div>
+          </div>
+          <!-- Total Profit & Loss Charts-->
+          <div class="col-md-4">
+            <div class="card p-3 h-100">
+              <h5>Total Profit & Loss</h5>
+              <!-- Chart Container -->
+              <div class="d-flex justify-content-center align-items-center h-100">
+                <canvas id="profitLossChart" style="max-width: 100%; height: auto;"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Customer Order Details Table -->
+        <div class="row">
+          <div class="table-responsive mt-4" id="table-wrapper">
+            <h5 id="table-header">Customer Order Details</h5>
+            <table class="table table-striped align-middle text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>
+                    <div class="header-content">
+                      <span>Order No</span>
+                      <img src="/assets/More Logo.svg" alt="More Option Logo" class="more-logo" onclick="toggleMenu(event, 'order-menu-0')" />
+                    </div>
+                    <div class="dropdown-menu rounded" id="order-menu-0">
+                      <ul>
+                        <li onclick="sortTable(0)">Sort</li>
+                        <li onclick="filterTable(0)">Filter</li>
+                        <li onclick="clearFilter()">Clear Filter</li>
+                      </ul>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="header-content">
+                      <span>Customer Name</span>
+                      <img src="/assets/More Logo.svg" alt="More Option Logo" class="more-logo" onclick="toggleMenu(event, 'order-menu-1')" />
+                    </div>
+                    <div class="dropdown-menu rounded" id="order-menu-1">
+                      <ul>
+                        <li onclick="sortTable(1)">Sort</li>
+                        <li onclick="filterTable(1)">Filter</li>
+                        <li onclick="clearFilter()">Clear Filter</li>
+                      </ul>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="header-content">
+                      <span>Address</span>
+                      <img src="/assets/More Logo.svg" alt="More Option Logo" class="more-logo" onclick="toggleMenu(event, 'order-menu-2')" />
+                    </div>
+                    <div class="dropdown-menu rounded" id="order-menu-2">
+                      <ul>
+                        <li onclick="sortTable(2)">Sort</li>
+                        <li onclick="filterTable(2)">Filter</li>
+                        <li onclick="clearFilter()">Clear Filter</li>
+                      </ul>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="header-content">
+                      <span>Date</span>
+                      <img src="/assets/More Logo.svg" alt="More Option Logo" class="more-logo" onclick="toggleMenu(event, 'order-menu-3')" />
+                    </div>
+                    <div class="dropdown-menu rounded" id="order-menu-3">
+                      <ul>
+                        <li onclick="sortTable(3)">Sort</li>
+                        <li onclick="filterTable(3)">Filter</li>
+                        <li onclick="clearFilter()">Clear Filter</li>
+                      </ul>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="header-content">
+                      <span>Payment Type</span>
+                      <img src="/assets/More Logo.svg" alt="More Option Logo" class="more-logo" onclick="toggleMenu(event, 'order-menu-4')" />
+                    </div>
+                    <div class="dropdown-menu rounded" id="order-menu-4">
+                      <ul>
+                        <li onclick="sortTable(4)">Sort</li>
+                        <li onclick="filterTable(4)">Filter</li>
+                        <li onclick="clearFilter()">Clear Filter</li>
+                      </ul>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="header-content">
+                      <span>Payment Status</span>
+                      <img src="/assets/More Logo.svg" alt="More Option Logo" class="more-logo" onclick="toggleMenu(event, 'order-menu-5')" />
+                    </div>
+                    <div class="dropdown-menu rounded" id="order-menu-5">
+                      <ul>
+                        <li onclick="sortTable(5)">Sort</li>
+                        <li onclick="filterTable(5)">Filter</li>
+                        <li onclick="clearFilter()">Clear Filter</li>
+                      </ul>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="header-content">
+                      <span>Delivery Status</span>
+                      <img src="/assets/More Logo.svg" alt="More Option Logo" class="more-logo" onclick="toggleMenu(event, 'order-menu-6')" />
+                    </div>
+                    <div class="dropdown-menu rounded" id="order-menu-6">
+                      <ul>
+                        <li onclick="sortTable(6)">Sort</li>
+                        <li onclick="filterTable(6)">Filter</li>
+                        <li onclick="clearFilter()">Clear Filter</li>
+                      </ul>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <!-- Table Body -->
+              <tbody>
+                  <tr>
+                      <td>#243654</td>
+                      <td>Quiche Hollandaise</td>
+                      <td>4693 White Oak Drive Kansas City, MO</td>
+                      <td>20 Nov 2021</td>
+                      <td>Paytm</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td><span class="badge text-dark bg-info bg-opacity-10 border border-info">Done</span></td>
+                  </tr>
+                  <tr>
+                      <td>#253461</td>
+                      <td>Ingredia Nutrisha</td>
+                      <td>2298 Jessie Street Columbus, OH</td>
+                      <td>20 Nov 2021</td>
+                      <td>Google Pay</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td><span class="badge text-dark bg-success bg-opacity-10 border border-success">Done</span></td>
+                  </tr>
+                  <tr>
+                      <td>#261247</td>
+                      <td>Valentino Morose</td>
+                      <td>3327 Taylor Street New York, NY</td>
+                      <td>20 Nov 2021</td>
+                      <td>Phonepe</td>
+                      <td><span class="badge bg-warning text-dark">Processing</span></td>
+                      <td><span class="badge text-dark bg-warning bg-opacity-10 border border-warning">Processing</span></td>
+                  </tr>
+                  <tr>
+                      <td>#263942</td>
+                      <td>Abraham Pigeon</td>
+                      <td>1065 Willis Avenue Daytona Beach, FL</td>
+                      <td>20 Nov 2021</td>
+                      <td>Cash On Delivery</td>
+                      <td><span class="badge bg-danger">Failed</span></td>
+                      <td><span class="badge text-dark bg-danger bg-opacity-10 border border-danger">Failed</span></td>
+                  </tr>
+                  <tr>
+                      <td>#264142</td>
+                      <td>Raymond B. Pacheco</td>
+                      <td>1457 Ferguson Street Worcester, MA</td>
+                      <td>20 Nov 2021</td>
+                      <td>Google Pay</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td><span class="badge text-dark bg-success bg-opacity-10 border border-success">Paid</span></td>
+                  </tr>
+                  <tr>
+                      <td>#265242</td>
+                      <td>Duane B. Sutherland</td>
+                      <td>916 Oak Drive St Johnsville, NY</td>
+                      <td>20 Nov 2021</td>
+                      <td>Paytm</td>
+                      <td><span class="badge bg-warning text-dark">Processing</span></td>
+                      <td><span class="badge text-dark bg-warning bg-opacity-10 border border-warning">Processing</span></td>
+                  </tr>
+              </tbody>
+            </table>
+            <nav aria-label="Page navigation example" class="nav-section"  id="nav-section">
+              <div class="row align-items-center gx-4">
+                <!-- Column for "Showing 1 to 10 out of 100 entries" -->
+                <div class="col-auto">
+                  <p class="mb-0 responsive-text">Showing 1 to 10 out of 100 entries</p>
+                </div>
+  
+                <!-- Column for Pagination List (remaining width) -->
+                <div class="col">
+                    <ul class="pagination justify-content-end mb-0">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link text-dark" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link text-dark" href="#">Next</a></li>
+                    </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+          
+        </main>
+    </div>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

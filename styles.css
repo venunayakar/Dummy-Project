@@ -1,0 +1,237 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.nav-link.active {
+  background-color: #db782dc6;
+
+  border-radius: 5px;
+}
+
+.nav-link rounded:hover {
+  background-color: #db782dc6;
+}
+
+.nav-link:hover {
+  background-color: #db782dc6;
+}
+
+a.nav-link-hover:hover {
+  background-color: rgba(0, 0, 0, 0.1); /*10% opacity */
+}
+
+
+@media (max-width: 768px) {
+  #profitLossChart {
+    max-width: 90%; /* Adjust the chart size on smaller screens */
+  }
+}
+
+/* Ensure space between p element and pagination on medium and larger screens */
+
+/* Container that enables synchronized horizontal scrolling */
+.scrollable-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.table-responsive {
+  display: inline-block;
+  min-width: 100%;
+}
+
+/* Responsive font sizes for the p element */
+.responsive-text p {
+  font-size: 1rem; /* Default size */
+}
+
+/* Pagination link font sizes */
+.pagination .page-link {
+  font-size: 1rem; /* Default size */
+}
+
+/* Medium screen adjustments */
+@media (max-width: 768px) {
+  .responsive-text p {
+      font-size: 0.9rem; /* Slightly smaller font size */
+  }
+  .pagination .page-link {
+      font-size: 0.9rem;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 576px) {
+  .responsive-text p {
+      font-size: 0.8rem; /* Even smaller font size */
+  }
+  .pagination .page-link {
+      font-size: 0.8rem;
+  }
+}
+
+.header-content {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.more-logo {
+  margin-left: 5px; /* some space between text and the image */
+  width: 16px; /* Set a specific width for better responsiveness */
+  height: 16px;
+  cursor: pointer; 
+}
+
+/* Responsive design adjustments */
+@media (max-width: 400px) {
+  .header-content {
+      flex-direction: column; /* Stack items on small screens */
+      align-items: flex-start; /* Align to the left */
+  }
+
+  .more-logo {
+      margin-left: 0; /* Reset margin on small screens */
+      margin-top: 2px; /* Add a bit of space between text and image */
+  }
+}
+
+/* Income Recieved Section */
+
+.payment-name {
+  font-size: 1rem;
+}
+
+.payment-value {
+  font-size: 1rem;
+  white-space: nowrap; /* Prevents breaking of large numbers */
+}
+
+@media (max-width: 768px) {
+  .payment-name, .payment-value {
+    font-size: 0.9rem; /* Slightly reduce font size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .payment-name, .payment-value {
+    font-size: 0.85rem; /* Reduce font size for mobile */
+  }
+
+  .payment-method {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: flex-start; /* Align text on the left */
+  }
+
+  .payment-value {
+    margin-top: 5px; /* Add some space above the amount */
+  }
+}
+
+
+@media (max-width: 768px) {
+  #mapChart {
+    height: 300px !important; /* Ensures consistent height on smaller devices */
+  }
+
+  .payment-name, .payment-value {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Customer order entries */
+
+.pagination .page-item .page-link {
+  color: #0d6efd;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #db782dc6;
+  border-color: #db782dc6;
+ 
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  table {
+      font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+/* table head dropdown custom css for customer order table */
+
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position it below the header */
+  background-color: white; /* Background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  z-index: 100; /* Above other elements */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown-menu ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 10px; /* Spacing inside the menu */
+  margin: 0; /* Remove default margin */
+}
+
+.dropdown-menu li {
+  padding: 8px 12px; /* Padding for menu items */
+  cursor: pointer; /* Cursor changes on hover */
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+
+
+@media (min-width: 767px) and (max-width: 932px) {
+  /* Adjust sidebar width */
+  .sidebar {
+    width: 200px;
+  }
+
+  /* Main content margin adjusted to match sidebar width */
+  .main-content {
+    margin-left: 200px;
+  }
+
+  /* Card and table font size adjustments */
+  .card, .table {
+    font-size: 0.95rem;
+  }
+
+  /* Adjust table layout */
+  table {
+    font-size: 0.9rem;
+  }
+}
+
